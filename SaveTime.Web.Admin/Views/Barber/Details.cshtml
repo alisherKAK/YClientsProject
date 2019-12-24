@@ -1,0 +1,58 @@
+﻿@model SaveTime.Web.Admin.Models.BarberDetailViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Barber</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkDayStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkDayStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkDayEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkDayEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BranchName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BranchName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BranchAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BranchAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

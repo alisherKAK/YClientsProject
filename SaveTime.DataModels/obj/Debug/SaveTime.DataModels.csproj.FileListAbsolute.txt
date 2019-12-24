@@ -1,0 +1,16 @@
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.DataModels.dll
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.DataModels.pdb
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.AbstractModels.dll
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.AbstractModels.pdb
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.csprojAssemblyReference.cache
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.csproj.CopyComplete
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.dll
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.pdb
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.DataModels.dll
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.DataModels.pdb
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.AbstractModels.dll
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\bin\Debug\SaveTime.AbstractModels.pdb
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.csprojAssemblyReference.cache
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.csproj.CopyComplete
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.dll
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataModels\obj\Debug\SaveTime.DataModels.pdb
