@@ -1,18 +1,21 @@
-﻿$(".company-details").on("click", function () {
-    $("#companyDetails").load("/Company/Details/" + $(this).attr("data-id"), null, function () {
-        load_js();
-    });
+﻿$(".table").on("click", "a[class=company-details]", function () {
+    $("#companyDetails").load("/Company/Details/" + $(this).attr("data-id"));
 });
 
-$(".company-edit").on("click", function () {
+$(".table").on("click", "a[class=company-edit]", function () {
     $("#partialView").load("/Company/Edit/" + $(this).attr("data-id"), null, function () {
         load_js("/Scripts/EditCompany.js");
     });
 });
 
-$(".company-delete").on("click", function () {
-    $("#partialView").load("/Company/Delete/" + $(this).attr("data-id"), null, function () {
-        load_js();
+$(".table").on("click", "a[class=company-delete]", function () {
+    $("#partialView").load("/Company/Delete/" + $(this).attr("data-id"), null, function () {;
+    });
+});
+
+$("#company-create").on("click", function () {
+    $("#partialView").load("/Company/Create/" + $(this).attr("data-id"), null, function () {
+        load_js("CreateCompany.js");
     });
 });
 

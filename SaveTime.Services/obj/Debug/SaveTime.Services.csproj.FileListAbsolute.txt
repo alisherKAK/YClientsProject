@@ -30,3 +30,5 @@ S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.dll
 S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.pdb
 C:\Users\калабаева\source\repos\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.dll
 C:\Users\калабаева\source\repos\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.xml
+S:\VisualStudio\ASP\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.dll
+S:\VisualStudio\ASP\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.xml
