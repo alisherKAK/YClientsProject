@@ -28,3 +28,5 @@ S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.cspro
 S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.csproj.CopyComplete
 S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.dll
 S:\VisualStudio\ASP\SaveTime\SaveTime.Services\obj\Debug\SaveTime.Services.pdb
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.dll
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.Services\bin\Debug\BCrypt.Net.xml

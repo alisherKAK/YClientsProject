@@ -224,3 +224,5 @@ S:\VisualStudio\ASP\SaveTime\SaveTime.Web.Admin\obj\Debug\SaveTime.Web.Admin.csp
 S:\VisualStudio\ASP\SaveTime\SaveTime.Web.Admin\obj\Debug\SaveTime.Web.Admin.csproj.CopyComplete
 S:\VisualStudio\ASP\SaveTime\SaveTime.Web.Admin\obj\Debug\SaveTime.Web.Admin.dll
 S:\VisualStudio\ASP\SaveTime\SaveTime.Web.Admin\obj\Debug\SaveTime.Web.Admin.pdb
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.Web.Admin\bin\BCrypt.Net.dll
+C:\Users\калабаева\source\repos\SaveTime\SaveTime.Web.Admin\bin\BCrypt.Net.xml

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
+using Newtonsoft.Json;
 using SaveTime.AbstractModels;
 using SaveTime.DataAccess;
 using SaveTime.DataModels.Organization;
@@ -76,7 +77,7 @@ namespace SaveTime.Web.Admin.Controllers
         // GET: Company/Create
         public ActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
         // POST: Company/Create
@@ -84,17 +85,17 @@ namespace SaveTime.Web.Admin.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,City")] CompanyCreateViewModel companyCreateViewModel)
+        public string Create([Bind(Include = "Id,Name,City")] CompanyCreateViewModel companyCreateViewModel)
         {
             if (ModelState.IsValid)
             {
                 var company = _mapper.Map<Company>(companyCreateViewModel);
 
                 _repositoryCompany.Add(company);
-                return RedirectToAction("Index");
+                return JsonConvert.SerializeObject(company);
             }
 
-            return View(companyCreateViewModel);
+            return "Failure to create company";
         }
 
         // GET: Company/Edit/5
@@ -113,7 +114,7 @@ namespace SaveTime.Web.Admin.Controllers
 
             var companyEditViewModel = _mapper.Map<CompanyEditViewModel>(company);
 
-            return View(companyEditViewModel);
+            return PartialView("_Edit", companyEditViewModel);
         }
 
         // POST: Company/Edit/5
@@ -121,16 +122,16 @@ namespace SaveTime.Web.Admin.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,City")] CompanyEditViewModel companyEditViewModel)
+        public string Edit([Bind(Include = "Id,Name,City")] CompanyEditViewModel companyEditViewModel)
         {
             if (ModelState.IsValid)
             {
                 var company = _mapper.Map<Company>(companyEditViewModel);
 
                 _repositoryCompany.Update(company);
-                return RedirectToAction("Index");
+                return JsonConvert.SerializeObject(company);
             }
-            return View(companyEditViewModel);
+            return "Failure to edit company";
         }
 
         // GET: Company/Delete/5
@@ -166,6 +167,13 @@ namespace SaveTime.Web.Admin.Controllers
 
             _repositoryCompany.Delete(company);
             return RedirectToAction("Index");
+        }
+
+        public string GetCompanies()
+        {
+            var companies = _repositoryCompany.GetAll().ToList();
+            var json = JsonConvert.SerializeObject(_repositoryCompany.GetAll().ToList());
+            return json;
         }
 
         //protected override void Dispose(bool disposing)

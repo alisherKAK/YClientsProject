@@ -33,7 +33,7 @@ namespace SaveTime.Web.Admin.Controllers
                     Id = service.Id,
                     Price = service.Price,
                     Title = service.Title,
-                    ApproximatelySpendTimeInMinutes = service.ApproximatelySpendTimeInMinutes
+                    ApproximatelySpendTimeInMinutes = service.SpendTimeInMinutes
                 };
 
                 serviceViewModels.Add(serviceViewModel);
@@ -76,7 +76,7 @@ namespace SaveTime.Web.Admin.Controllers
                 {
                     Title = serviceViewModel.Title,
                     Price = serviceViewModel.Price,
-                    ApproximatelySpendTimeInMinutes = serviceViewModel.ApproximatelySpendTimeInMinutes
+                    SpendTimeInMinutes = serviceViewModel.ApproximatelySpendTimeInMinutes
                 };
 
                 _repository.Add(service);
