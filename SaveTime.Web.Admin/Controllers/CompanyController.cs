@@ -59,15 +59,20 @@ namespace SaveTime.Web.Admin.Controllers
 
             var companyDetailViewModel = _mapper.Map<CompanyDetailViewModel>(company);
 
-            var branches = _repositoryBranch.GetAll().Where(b => b.Company.Id == company.Id).ToList();
             var branchesDetailsViewModel = new List<BranchViewModel>();
 
-            foreach(var branch in branches)
+            try
             {
-                var branchDetailViewModel = _mapper.Map<BranchViewModel>(branch);
+                var branches = _repositoryBranch.GetAll().Where(b => b.Company.Id == company.Id).ToList();
 
-                branchesDetailsViewModel.Add(branchDetailViewModel);
+                foreach (var branch in branches)
+                {
+                    var branchDetailViewModel = _mapper.Map<BranchViewModel>(branch);
+
+                    branchesDetailsViewModel.Add(branchDetailViewModel);
+                }
             }
+            catch(NullReferenceException){}
 
             companyDetailViewModel.Branches = branchesDetailsViewModel;
 
@@ -159,11 +164,15 @@ namespace SaveTime.Web.Admin.Controllers
         {
             var company = _repositoryCompany.Get(id);
 
-            foreach(var branch in _repositoryBranch.GetAll().Where(b => b.Company.Id == company.Id))
+            try
             {
-                branch.Company = null;
-                _repositoryBranch.Update(branch);
+                foreach (var branch in _repositoryBranch.GetAll().Where(b => b.Company.Id == company.Id))
+                {
+                    branch.Company = null;
+                    _repositoryBranch.Update(branch);
+                }
             }
+            catch (NullReferenceException){}
 
             _repositoryCompany.Delete(company);
             return RedirectToAction("Index");
