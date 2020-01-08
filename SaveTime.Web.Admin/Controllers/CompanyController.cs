@@ -76,7 +76,7 @@ namespace SaveTime.Web.Admin.Controllers
 
             companyDetailViewModel.Branches = branchesDetailsViewModel;
 
-            return View(companyDetailViewModel);
+            return PartialView("_Details", companyDetailViewModel);
         }
 
         // GET: Company/Create
@@ -154,7 +154,7 @@ namespace SaveTime.Web.Admin.Controllers
 
             var companyDeleteViewModel = _mapper.Map<CompanyDeleteViewModel>(company);
 
-            return View(companyDeleteViewModel);
+            return PartialView("_Delete", companyDeleteViewModel);
         }
 
         // POST: Company/Delete/5
@@ -180,7 +180,6 @@ namespace SaveTime.Web.Admin.Controllers
 
         public string GetCompanies()
         {
-            var companies = _repositoryCompany.GetAll().ToList();
             var json = JsonConvert.SerializeObject(_repositoryCompany.GetAll().ToList());
             return json;
         }

@@ -38,3 +38,5 @@ S:\VisualStudio\ASP\SaveTime\SaveTime.DataAccess\obj\Debug\SaveTime.DataAccess.d
 S:\VisualStudio\ASP\SaveTime\SaveTime.DataAccess\obj\Debug\SaveTime.DataAccess.pdb
 C:\Users\калабаева\source\repos\SaveTime\SaveTime.DataAccess\obj\Debug\SaveTime.DataAccess.Migrations.ChangeService.resources
 S:\VisualStudio\ASP\SaveTime\SaveTime.DataAccess\obj\Debug\SaveTime.DataAccess.Migrations.ChangeService.resources
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataAccess\bin\Debug\Newtonsoft.Json.dll
+S:\VisualStudio\ASP\SaveTime\SaveTime.DataAccess\bin\Debug\Newtonsoft.Json.xml

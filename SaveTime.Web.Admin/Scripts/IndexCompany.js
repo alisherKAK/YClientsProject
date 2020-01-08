@@ -14,7 +14,7 @@ $(".table").on("click", "a[class=company-delete]", function () {
 });
 
 $("#company-create").on("click", function () {
-    $("#partialView").load("/Company/Create/" + $(this).attr("data-id"), null, function () {
+    $("#partialView").load("/Company/Create/", null, function () {
         load_js("CreateCompany.js");
     });
 });

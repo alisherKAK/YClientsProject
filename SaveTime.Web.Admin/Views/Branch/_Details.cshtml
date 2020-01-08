@@ -1,0 +1,75 @@
+﻿@model SaveTime.Web.Admin.Models.BranchDetailViewModel
+
+<h2>Details</h2>
+
+<div>
+    <h4>Branch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartWork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndWork)
+        </dd>
+
+    </dl>
+    <hr />
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a href="/Barber/Edit/@item.Id">Edit</a> |
+                    <a href="/Barber/Details/@item.Id">Details</a> |
+                    <a href="/Barber/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

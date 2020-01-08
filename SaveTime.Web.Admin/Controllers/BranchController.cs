@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using AutoMapper;
+using Newtonsoft.Json;
 using SaveTime.AbstractModels;
 using SaveTime.DataModels.Organization;
 using SaveTime.Web.Admin.Models;
@@ -63,7 +64,7 @@ namespace SaveTime.Web.Admin.Controllers
                 branchDetailViewModel.Employees.Add(barberViewModel);
             }
 
-            return View(branchDetailViewModel);
+            return PartialView("_Details", branchDetailViewModel);
         }
 
         // GET: Branch/Create
@@ -82,7 +83,7 @@ namespace SaveTime.Web.Admin.Controllers
                 selectListItems.Add(selectListItem);
             }
 
-            return View(new BranchCreateViewModel() { Companies = selectListItems});
+            return PartialView("_Create", new BranchCreateViewModel() { Companies = selectListItems});
         }
 
         // POST: Branch/Create
@@ -129,7 +130,7 @@ namespace SaveTime.Web.Admin.Controllers
                 branchEditViewModel.Companies.Add(selectListItem);
             }
 
-            return View(branchEditViewModel);
+            return PartialView("_Edit", branchEditViewModel);
         }
 
         // POST: Branch/Edit/5
@@ -165,7 +166,7 @@ namespace SaveTime.Web.Admin.Controllers
 
             var branchDeleteViewModel = _mapper.Map<BranchDeleteViewModel>(branch);
 
-            return View(branchDeleteViewModel);
+            return PartialView("_Delete", branchDeleteViewModel);
         }
 
         // POST: Branch/Delete/5
@@ -176,6 +177,13 @@ namespace SaveTime.Web.Admin.Controllers
             var branch = _repositoryBranch.Get(id);
             _repositoryBranch.Delete(branch);
             return RedirectToAction("Index");
+        }
+
+        public string GetBranches()
+        {
+            var branches = _repositoryBranch.GetAll().ToList();
+            var jsonBranches = JsonConvert.SerializeObject(branches);
+            return jsonBranches;
         }
 
         //protected override void Dispose(bool disposing)

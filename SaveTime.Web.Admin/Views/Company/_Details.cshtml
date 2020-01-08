@@ -1,0 +1,74 @@
+﻿@model SaveTime.Web.Admin.Models.CompanyDetailViewModel
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+    </dl>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches[0].StartWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches[0].EndWork)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Branches)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartWork)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndWork)
+                </td>
+                <td>
+                    <a href="/Branch/Edit/@item.Id">Edit</a> |
+                    <a href="/Branch/Details/@item.Id">Details</a> |
+                    <a href="/Branch/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

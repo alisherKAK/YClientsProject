@@ -1,4 +1,5 @@
-﻿using SaveTime.AbstractModels.Marker;
+﻿using Newtonsoft.Json;
+using SaveTime.AbstractModels.Marker;
 using System;
 using System.Collections.Generic;
 
@@ -12,6 +13,7 @@ namespace SaveTime.DataModels.Organization
         public string Email { get; set; }
         public DateTime StartWork { get; set; }
         public DateTime EndWork { get; set; }
+        [JsonIgnore]
         public virtual Company Company { get; set; }
         public IList<IEmployee> Employees { get; set; }
 

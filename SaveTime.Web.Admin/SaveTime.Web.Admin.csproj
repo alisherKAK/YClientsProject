@@ -194,8 +194,10 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\CreateBranch.js" />
     <Content Include="Scripts\CreateCompany.js" />
     <Content Include="Scripts\EditCompany.js" />
+    <Content Include="Scripts\IndexBranch.js" />
     <Content Include="Scripts\IndexCompany.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -249,6 +251,12 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Company\_Create.cshtml" />
     <Content Include="Views\Company\_Edit.cshtml" />
+    <Content Include="Views\Company\_Delete.cshtml" />
+    <Content Include="Views\Company\_Details.cshtml" />
+    <Content Include="Views\Branch\_Create.cshtml" />
+    <Content Include="Views\Branch\_Edit.cshtml" />
+    <Content Include="Views\Branch\_Details.cshtml" />
+    <Content Include="Views\Branch\_Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
